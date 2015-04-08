@@ -1,7 +1,12 @@
 section#app {
 	
+	box-shadow: 0px 2px 5px rgba(0,0,0,0.4);
+	background: url(../img/bg/stressed_linen.png);
+	max-width: 100%;
+	
 	p {
 		
+		color: white;
 		margin-bottom: 30px;
 		
 	}
@@ -9,16 +14,25 @@ section#app {
 	#appleStore,
 	#androidStore {
 		
-		height: 40px;
-		margin-right: 20px;
+		height: 60px;
+		margin:0 20px 20px 0;
 		
 	}
 	
 	img#screenshot {
 		
-		max-width: 100%;
+		max-width: 50%;
+		position: absolute;
+		bottom: 0;
+		max-height: 100%;
+		right: 20px;
+		z-index: 100000;
 		
-		height: auto;
+	}
+	
+	.col1 {
+		
+		padding: 10% 0;
 		
 	}
 	

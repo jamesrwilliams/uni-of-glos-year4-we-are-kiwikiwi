@@ -23,28 +23,6 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/src\/img\/app.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 0,
-		"inputAbbreviatedPath": "\/src\/img\/app.png",
-		"outputAbbreviatedPath": "\/src\/img\/app.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 1
-		},
-	"\/src\/img\/app_screen.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 6.81057e+06,
-		"inputAbbreviatedPath": "\/src\/img\/app_screen.jpg",
-		"outputAbbreviatedPath": "\/src\/img\/app_screen.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/src\/img\/en_app_rgb_wo_60.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -52,17 +30,6 @@
 		"initialSize": 10486,
 		"inputAbbreviatedPath": "\/src\/img\/en_app_rgb_wo_60.png",
 		"outputAbbreviatedPath": "\/src\/img\/en_app_rgb_wo_60.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/src\/img\/hybrid.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 0,
-		"inputAbbreviatedPath": "\/src\/img\/hybrid.png",
-		"outputAbbreviatedPath": "\/src\/img\/hybrid.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -78,13 +45,68 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/src\/img\/kiwi.png": {
+	"\/src\/img\/main-header.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 0,
-		"inputAbbreviatedPath": "\/src\/img\/kiwi.png",
-		"outputAbbreviatedPath": "\/src\/img\/kiwi.png",
+		"initialSize": 104075,
+		"inputAbbreviatedPath": "\/src\/img\/main-header.png",
+		"outputAbbreviatedPath": "\/src\/img\/main-header.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/src\/img\/team\/james.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 286517,
+		"inputAbbreviatedPath": "\/src\/img\/team\/james.png",
+		"outputAbbreviatedPath": "\/src\/img\/team\/james.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/src\/img\/team\/John-Evans.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 136851,
+		"inputAbbreviatedPath": "\/src\/img\/team\/John-Evans.jpg",
+		"outputAbbreviatedPath": "\/src\/img\/team\/John-Evans.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/src\/img\/team\/michael-faraday.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 38051,
+		"inputAbbreviatedPath": "\/src\/img\/team\/michael-faraday.jpg",
+		"outputAbbreviatedPath": "\/src\/img\/team\/michael-faraday.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/src\/img\/team\/mike-pascoe.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 48468,
+		"inputAbbreviatedPath": "\/src\/img\/team\/mike-pascoe.jpg",
+		"outputAbbreviatedPath": "\/src\/img\/team\/mike-pascoe.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/src\/img\/team\/paul.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 190355,
+		"inputAbbreviatedPath": "\/src\/img\/team\/paul.png",
+		"outputAbbreviatedPath": "\/src\/img\/team\/paul.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -248,6 +270,22 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
+	"\/src\/scss\/sections\/_hero.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/src\/scss\/sections\/_hero.scss",
+		"outputAbbreviatedPath": "\/src\/scss\/css\/_hero.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
 	"\/src\/scss\/sections\/_team.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
@@ -273,6 +311,22 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/src\/scss\/style.scss",
 		"outputAbbreviatedPath": "\/src\/css\/style.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
+	"\/src\/scss\/utils\/_functions.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/src\/scss\/utils\/_functions.scss",
+		"outputAbbreviatedPath": "\/src\/scss\/css\/_functions.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,

@@ -5,122 +5,17 @@
  */
  
 @import "utils/variables";
+@import "utils/functions";
 
 @import "parts/base";
 @import "parts/header";
 @import "parts/footer";
 
+@import "sections/hero";
 @import "sections/team";
 @import "sections/app";
 @import "sections/game";
 @import "sections/contact";
-
-
-.hero {
-	
-	background: $colour_Highlight_Green;
-	position: relative;
-	overflow: hidden;
-	height: 400px;
-	margin: 0;
-	
-	p {
-		
-		font-weight: bold;
-		
-	}
-	
-	#col1 a { height: 100%; }
-	#col2 { right: 0; }
-	
-	#col1,
-	#col2 {
-		
-		position: absolute;
-		width: 50%;
-		height: 100%;
-		
-		a {
-			overflow: hidden;
-			display: block;
-			text-decoration: none;
-			color: white;
-			-webkit-transition: all 1s ease;
-			
-			h1 {
-				
-				font-size: 2.5vh; margin: 0;
-				
-			}
-			
-		}
-		
-		a:hover {
-			
-		
-			
-		}
-		
-	}
-	
-	#hero1,
-	#hero2, 
-	#hero3 {
-		
-		 padding: 10%; overflow: hidden; height: 100%;	 
-		 
-		 p {line-height: 1.3em;}
-		 
-	}
-	
-	#hero1 {
-		
-		background: url(../img/hybrid.png), rgba(0,0,0,1);
-		background-position: center center;
-		background-size: cover;
-		
-	}
-	
-	#hero2 {
-		
-		background: url(../img/app.png), rgba(0,0,0,1);
-		background-position: center center;
-		background-size: cover;
-		
-	}
-	
-	#hero3 {
-		
-		background: url(../img/kiwi.png), rgba(0,0,0,1);
-		background-position: center center;
-		background-size: cover;
-		
-	}
-	
-	#hero2,
-	#hero3 {
-		
-		height: 50%;
-		min-height: 200px;
-		
-		h2 {
-			
-			margin: 0;
-			
-		}
-		
-	}
-
-}
-
-.hero:after {
-	
-	clear: both;
-	content: "";
-	display: block;
-	
-}
-
 
 @import "media/max-1000";
 @import "media/max-650";

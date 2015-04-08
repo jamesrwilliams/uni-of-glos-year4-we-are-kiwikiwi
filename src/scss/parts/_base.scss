@@ -19,11 +19,28 @@ body {
 
 }
 
-
 .wrapper {
 	
+	position: relative;
 	max-width: 1080px;
 	margin: 0 auto;
+	
+}
+
+.wrapper:after {
+	
+	content: "";
+	display: block;
+	clear: both;
+	
+}
+
+h1,
+h2,
+h3,
+h4 {
+	
+	color: $colour_Highlight_Green;
 	
 }
 
@@ -35,16 +52,15 @@ body {
 	
 }
 
-
-section {
-	
+section,
+footer {
 	
 	.col1,
 	.col2 {
 		
 		float: left;
 		width: 50%;
-		padding: 20px;
+		padding: 0 20px;
 		
 	}
 	
@@ -56,34 +72,10 @@ section:after {
 	display: block;
 	clear: both;
 	
-	
-	
 }
 
-section#core {
+section {
 	
-	background: white;
-	padding: 10px 20px;
-	
-	p {color: #8a8a8a; }
-	
-	
-	h3 {
-		
-		color: black;
-		margin-top: 10px;
-		font-size: 1.8em;
-		font-weight: bold;
-		
-	}
-	
-}
-
-section#team,
-section#app,
-section#contact,
-section#game {
-	
-	padding: 30px;
+	padding: 0 30px;
 	
 }

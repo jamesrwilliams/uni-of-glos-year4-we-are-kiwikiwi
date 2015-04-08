@@ -1,16 +1,14 @@
 header {
 	
 	margin: 0;
-	margin-bottom: 30px;
-	
 	position: relative;
 	z-index: 10000;
-	
-
-	
-	background: #1A1D1E;
+	// background: #1A1D1E;
+	background: white;
 	color: #CDDBD8;
 	padding: 10px;
+	
+	border-bottom: 1px solid #ccc;
 	
 	nav {
 		
@@ -19,17 +17,9 @@ header {
 		a {
 			
 			font-weight: bold;
-			color: white;
-			text-decoration: none;
-			
-			-webkit-transition: color 0.4s ease;
-			
-		}
-		
-		a:hover {
-			
 			color: $colour_Highlight_Green;
-			
+			text-decoration: none;
+					
 		}
 		
 	}
@@ -37,15 +27,6 @@ header {
 	h1,
 	nav#master,
 	nav#social { float: left; }
-	
-	h1 {
-		
-		line-height: 40px;
-		font-weight: 400;
-		width: 20%;
-		margin: 0;
-		color: white;
-	}
 	
 	#bird {
 		
@@ -62,7 +43,7 @@ header {
 	
 	nav#master {
 		
-		width: 40%;
+		width: 60%;
 		
 		a {
 			
