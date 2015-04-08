@@ -1,0 +1,71 @@
+@media screen and (max-width:650px) {
+	
+	header {
+		
+		h1,
+		nav#social,
+		nav#master {
+			
+			float: none;
+			width: 100%;
+			text-align: center;
+
+			a {
+				
+				float: none;				
+				width: 45px;
+				height: 10px;
+				margin: 0 10px;
+				
+			}
+			
+		}
+		
+		nav#social {
+			
+			border-top: 1px solid rgba(0,0,0,0.5);
+			padding-top: 7px;
+			margin-bottom: 20px;
+			
+		}
+		
+	}
+	
+	.hero {
+		
+		height: 600px;
+		
+		
+		
+		#col1,
+		#col2 {
+		
+			position: static;
+			width: 100%;
+			height: 200px;
+
+		}
+		
+		#hero1,
+		#hero2, 
+		#hero3 { padding: 40px 20px 20px 20px; box-shadow: inset 0px 0px 10px rgba(0,0,0,0.1); h1 {text-align: center;}}
+		
+		
+		
+	}
+	
+	section {
+	
+		.col1,
+		.col2,
+		.col3 {
+			
+			float: none;
+			width: 100%;
+			padding: 10px;
+			
+		}
+		
+	}
+		
+}

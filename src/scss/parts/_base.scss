@@ -1,0 +1,89 @@
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+html,
+body {
+	
+	background: #ECECEC;
+	margin: 0; padding: 0;
+	-webkit-font-smoothing: antialiased;
+	font-family: sans-serif;
+	
+	font-size: 14px;
+	
+	p {
+		
+		line-height: 1.6em;
+		margin-bottom: 5px;
+		
+	}
+
+}
+
+
+.wrapper {
+	
+	max-width: 1080px;
+	margin: 0 auto;
+	
+}
+
+.outer_wrapper {
+	
+	max-width: 1080px;
+	margin: 0 auto;
+	border: 1px solid rgba(0,0,0,0.05);
+	
+}
+
+
+section {
+	
+	
+	.col1,
+	.col2 {
+		
+		float: left;
+		width: 50%;
+		padding: 20px;
+		
+	}
+	
+}
+
+section:after {
+	
+	content: "";
+	display: block;
+	clear: both;
+	
+	
+	
+}
+
+section#core {
+	
+	background: white;
+	padding: 10px 20px;
+	
+	p {color: #8a8a8a; }
+	
+	
+	h3 {
+		
+		color: black;
+		margin-top: 10px;
+		font-size: 1.8em;
+		font-weight: bold;
+		
+	}
+	
+}
+
+section#team,
+section#app,
+section#contact,
+section#game {
+	
+	padding: 30px;
+	
+}

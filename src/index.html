@@ -7,6 +7,8 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         
+        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        
          <link rel="stylesheet" href="css/style.css">
          </head>
     <body>
@@ -20,9 +22,9 @@
 			    <nav id="master">
 				    
 				    <a class="active" href="#">Home</a>
-				    <a href="#">Team</a>
-				    <a href="#">Games</a>
-				    <a href="#">Contact</a>   
+				    <a href="#team">Team</a>
+				    <a href="#game">Games</a>
+				    <a href="#contact">Contact</a>   
 				    
 			    </nav>
 			    
@@ -80,7 +82,7 @@
 							
 							<h1>Want to get in touch?</h1>
 							
-							<p>Hey want to sponsor this awesome comx team? Feel free to drop us, our details are on the contact page.</p>
+							<p>Hey want to sponsor this awesome comx team? Feel free to drop us a line, our details are on the contact page.</p>
 							
 						</article>
 					
@@ -110,12 +112,152 @@
 				
 				<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
 					
-			</article>
+			</article>			
 			
+		</section>
+	    </div>
+		<div class="wrapper">
+		<section id="team">
+			
+			
+				
+				<h2>Team</h2>
+				
+				<ul>
+					
+					<li><img id="profile">
+					
+						<h4>{Name}</h4>
+						
+						<p class="job">{JOB TITLE}</p>
+						
+						<nav id="social">
+							
+							<a href="">Twitter</a>
+							<a href="">Email</a>
+							<a href="">Facebook</a>
+							
+						</nav>
+					
+					</li>
+					
+					<li><img id="profile">
+					
+						<h4>{Name}</h4>
+						
+						<p class="job">{JOB TITLE}</p>
+						
+						<nav id="social">
+							
+							<a href="">Twitter</a>
+							<a href="">Email</a>
+							<a href="">Facebook</a>
+							
+						</nav>
+					
+					</li>	
+					
+					<li><img id="profile">
+					
+						<h4>{Name}</h4>
+						
+						<p class="job">{JOB TITLE}</p>
+						
+						<nav id="social">
+							
+							<a href="">Twitter</a>
+							<a href="">Email</a>
+							<a href="">Facebook</a>
+							
+						</nav>
+					
+					</li>	
+					
+					<li><img id="profile">
+					
+						<h4>{Name}</h4>
+						
+						<p class="job">{JOB TITLE}</p>
+						
+						<nav id="social">
+							
+							<a href="">Twitter</a>
+							<a href="">Email</a>
+							<a href="">Facebook</a>
+							
+						</nav>
+					
+					</li>	
+				
+					
+				</ul>
+			
+			<a href="#master">Back to top</a>
+			
+		</section>
+		</div>
+		
+		
+			<section id="game"><div class="wrapper"><h2>Game</h2></div></section>
+		
+		<div class="wrapper">
+		
+		<section id="app">
+		
+			
+				
+				<div class="col1">
+					
+					<h2>Hybrid Companion App</h2>
+					
+					<p>Continue your adventure wherever you are with the Hybrid Companion. View your character stats, read up on lore and play the Infection mini-game and, receive the latest news and updates about the Hybrid.</p>
+					
+					<a href="#"><img id="appleStore" src="img/Download_on_the_App_Store_Badge_US-UK_135x40.svg" alt="Download on the Apple App Store" /></a>
+					<a href="#"><img id="androidStore" src="img/en_app_rgb_wo_60.png" alt="Download on the Google Play Store" /></a>
+					
+				</div>
+				
+				<div class="col2">
+				
+					<img id="screenshot" src="img/iPhone_5s_Vert_SpaceGray_sRGB.gif" height="" width="" alt="The Hybrid Companion App" />
+				
+				</div>
 			
 			
 			
 		</section>
+	    
+	    </div>
+	    
+	 
+	    
+	    <section id="contact">
+		       <div class="wrapper">
+		    <div class="col1">
+		    
+		    	<h2>Contact</h2>
+		    	
+		    </div>
+		    
+			<div class="col2">
+			    
+				   <form id="contact_form">
+					    
+					    <label for="email">Email</label>
+					    <input type="email" name="email" id="email" placeholder="Email" />
+					    
+					    <label for="name">Name</label>
+					    <input type="text" name="name" id="name" placeholder="Name" />
+					   
+						<label for="comment">Question / Comment</label>
+						<textarea name="comment" id="comment"></textarea>
+					   
+				    </form>
+			    
+			    </div>
+		    
+		    </div>
+	    </section>
 	    
 	    <footer>
 		    
@@ -124,10 +266,9 @@
 			    <p>&copy; 2015 - Kiwi Kiwi Games</p>
 			    
 		    </div>
-		    
 	    </footer>
 	    
-    	</div>
+    	<script src="js/min/core-min.js"></script>
 	    
     </body>
 </html>

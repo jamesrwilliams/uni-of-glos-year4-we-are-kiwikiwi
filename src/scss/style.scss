@@ -4,157 +4,17 @@
  * Imports other partials.
  */
  
- @import "utils/variables";
- 
- 
- $colour_Highlight_Green: #a9c322;
- $colour_background: #1A1D1E;
- 
- 
+@import "utils/variables";
 
-* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+@import "parts/base";
+@import "parts/header";
+@import "parts/footer";
 
-html,
-body {
-	
-	background: #ECECEC;
-	margin: 0; padding: 0;
-	-webkit-font-smoothing: antialiased;
-	font-family: sans-serif;
-	
-	font-size: 14px;
-	
-	p {
-		
-		line-height: 1.6em;
-		margin-bottom: 5px;
-		
-	}
+@import "sections/team";
+@import "sections/app";
+@import "sections/game";
+@import "sections/contact";
 
-	
-}
-
-.wrapper {
-	
-	max-width: 1080px;
-	margin: 0 auto;
-	
-}
-
-.outer_wrapper {
-	
-	max-width: 1080px;
-	margin: 0 auto;
-	border: 1px solid rgba(0,0,0,0.05);
-	
-}
-
-header {
-	
-	margin: 0;
-	margin-bottom: 30px;
-	
-	position: relative;
-	z-index: 10000;
-	
-
-	
-	background: #1A1D1E;
-	color: #CDDBD8;
-	padding: 10px;
-	
-	nav {
-		
-		min-height: 40px;
-		
-		a {
-			
-			font-weight: bold;
-			color: white;
-			text-decoration: none;
-			
-			-webkit-transition: color 0.4s ease;
-			
-		}
-		
-		a:hover {
-			
-			color: $colour_Highlight_Green;
-			
-		}
-		
-	}
-	
-	h1,
-	nav#master,
-	nav#social { float: left; }
-	
-	h1 {
-		
-		line-height: 40px;
-		font-weight: 400;
-		width: 20%;
-		margin: 0;
-		color: white;
-	}
-	
-	#bird {
-		
-		position: absolute;
-		left: 0;
-		
-	}
-	
-	.highlight {
-		
-		color: $colour_Highlight_Green;
-		
-	}
-	
-	nav#master {
-		
-		width: 40%;
-		
-		a {
-			
-			line-height: 40px;
-			margin-right: 10px;
-			
-		}
-		
-		a.active { color: $colour_Highlight_Green;}
-		
-	}
-	
-	nav#social {
-		
-		width: 40%;
-		height: 40px;
-		
-		a {
-			
-			float: right;
-			display: inline-block;
-			width: 30px;
-			margin-top: 5px;
-			margin-left: 20px;
-
-			
-		}
-		
-	}
-	
-	-webkit-transition: margin 1s ease;
-	
-}
-
-header:after {
-	
-	content: "";
-	display: block;
-	clear: both;
-	
-}
 
 .hero {
 	
@@ -207,9 +67,7 @@ header:after {
 	#hero2, 
 	#hero3 {
 		
-		 padding: 10%; overflow: hidden; height: 100%;
-		 
-		 
+		 padding: 10%; overflow: hidden; height: 100%;	 
 		 
 		 p {line-height: 1.3em;}
 		 
@@ -263,141 +121,6 @@ header:after {
 	
 }
 
-section#core {
-	
-	background: white;
-	padding: 10px 20px;
-	
-	p {color: #8a8a8a; }
-	
-	.col1,
-	.col2 {
-		
-		float: left;
-		width: 50%;
-		padding: 20px;
-		
-	}
-	
-	h3 {
-		
-		color: black;
-		margin-top: 10px;
-		font-size: 1.8em;
-		font-weight: bold;
-		
-	}
-	
-}
 
-section#core:after {
-	
-	content: "";
-	display: block;
-	clear: both;
-	
-	
-	
-}
-
-
-footer {
-	
-	padding: 10px;
-	background: $colour_background;
-	
-	p {
-		margin: 0;
-		font-size: 12px;
-		font-weight: bold;
-		color: #CDDBD8;
-		
-	}
-	
-}
-
-@media screen and (max-width:1080px){
-	
-	header {margin-bottom: 0; 	box-shadow: 0px 2px 5px rgba(0,0,0,0.4);}
-	
-	.hero p {font-size: 12px;}
-	
-	.outer_wrapper {
-	
-		border: none;
-	
-	}
-	
-}
-
-@media screen and (max-width:650px) {
-	
-	header {
-		
-		h1,
-		nav#social,
-		nav#master {
-			
-			float: none;
-			width: 100%;
-			text-align: center;
-
-			a {
-				
-				float: none;				
-				width: 45px;
-				height: 10px;
-				margin: 0 10px;
-				
-			}
-			
-		}
-		
-		nav#social {
-			
-			border-top: 1px solid rgba(0,0,0,0.5);
-			padding-top: 7px;
-			margin-bottom: 20px;
-			
-		}
-		
-	}
-	
-	.hero {
-		
-		height: 600px;
-		
-		
-		
-		#col1,
-		#col2 {
-		
-			position: static;
-			width: 100%;
-			height: 200px;
-
-		}
-		
-		#hero1,
-		#hero2, 
-		#hero3 { padding: 40px 20px 20px 20px; box-shadow: inset 0px 0px 10px rgba(0,0,0,0.1); h1 {text-align: center;}}
-		
-		
-		
-	}
-	
-	section#core {
-	
-	.col1,
-	.col2,
-	.col3 {
-		
-		float: none;
-		width: 100%;
-		padding: 10px;
-		
-	}
-	
-}
-		
-}
+@import "media/max-1000";
+@import "media/max-650";
