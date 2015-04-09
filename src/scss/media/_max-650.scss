@@ -1,5 +1,7 @@
 @media screen and (max-width:650px) {
 	
+	body {border-top: 20px solid red;}
+	
 	header {
 		
 		h1,
@@ -31,7 +33,7 @@
 	}
 
 	
-	section { .col1, .col2 { padding: 0 10px; } }
-		section { padding: 10px; }
+	section { .col1, .col2 { padding: 0 10px; float: none; width: 100%; } }
+		section { padding: 0 10px; }
 		
 }
