@@ -1,21 +1,236 @@
-/**
- * Main.scss File
- * ---
- * Imports other partials.
- */
- 
-@import "utils/variables";
-@import "utils/functions";
+* {
+	
+	-webkit-font-smoothing: antialiased;
+}
 
-@import "parts/base";
-@import "parts/header";
-@import "parts/footer";
+$kiwi_green: #a9c322;
 
-@import "sections/hero";
-@import "sections/team";
-@import "sections/app";
-@import "sections/game";
-@import "sections/contact";
+body {
+	
+  font-size: 16px;
+  line-height: 27px;
+  
+}
 
-@import "media/max-1000";
-@import "media/max-650";
+h1 {
+	
+  font-size: 79px;
+  line-height: 81px;
+  margin-top: 54px;
+  margin-bottom: 27px;
+  
+}
+h2 {
+	
+  font-size: 46px;
+  line-height: 54px;
+  margin-top: 54px;
+  margin-bottom: 27px;
+  
+}
+h3 {
+	
+  font-size: 27px;
+  line-height: 27px;
+  margin-top: 27px;
+  margin-bottom: 27px;
+  
+}
+h4 {
+	
+  font-size: 16px;
+  line-height: 27px;
+  margin-top: 27px;
+  margin-bottom: 27px;
+  
+}
+p, ul, ol, pre, table, blockquote {
+	
+  margin-top: 27px;
+  margin-bottom: 27px;
+  
+}
+
+hr {
+	
+  border: 1px solid;
+  margin: -1px 0;
+  
+}
+ul ul, ol ol, ul ol, ol ul {
+	
+  margin-top: 0;
+  margin-bottom: 0;
+  
+}
+b, strong, em, small, code {
+	
+  line-height: 1;
+  
+}
+sup, sub {
+	
+  vertical-align: baseline;
+  position: relative;
+  top: -0.4em;
+  
+}
+sub {
+	
+  top: 0.4em;
+  
+}
+
+.top-bar .name h1 a {
+	
+	color: $kiwi_green;
+	font-weight: bold;
+	
+}
+
+ul.social {
+	
+	padding: 10px;
+	
+}
+
+.social {
+	
+	margin-left: -15px;
+	
+}
+
+.videoWrapper {
+		
+		position: relative;
+		padding-bottom: 56.25%;
+		padding-top: 25px;
+		height: 0;
+		margin-bottom: 20px;
+	}
+		
+.videoWrapper iframe {
+	
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+#bgvid {
+		
+	position: absolute;
+	top:0;
+	width: 100%;
+	height: 100%;
+		
+}
+
+header {
+	
+	background: #333333;
+	
+}
+
+section.hero {
+	
+	.splash p {
+		
+		
+		background: url(../img/hero.jpg) repeat;
+		-webkit-background-clip: text;
+		
+	}
+	
+	#logo {
+		
+		width: 100%;
+		height: auto;
+		
+	}	
+	
+	background: url(../img/hero.jpg);
+	background-position: center center;
+	background-size: cover;
+	
+	color: white;
+	border-top: 1px solid rgba(255,255,255,0.1);
+	
+	padding: 15vh 0 0 0;
+	
+	
+	
+	h2 {
+		
+		font-family: "futura-pt",sans-serif;
+		text-shadow: 0px 2px 2px rgba(0,0,0,0.5);
+		font-weight: 400;
+		font-size: 72px;
+		line-height: 1em;
+		color: white;
+		
+	}
+	
+}
+
+.highlight {
+		
+		color: $kiwi_green;
+		
+	}
+
+section.game {
+	
+		
+}
+
+section.app {
+	
+	background: #ECECEC;
+	
+}
+
+section.team {
+	
+	h3 {
+		
+		font-weight: bold;
+		
+	}
+	
+	h3 {
+		
+		margin-bottom: 0;
+		
+	}
+	
+	p {
+		
+		// margin-top: 0;
+		font-size: 14px;
+		
+	}
+	
+	.row:not(:last-child) {
+		
+		// border-bottom: 1px solid red;
+		margin-bottom: 20px;
+		
+	}
+	
+	.profile img {
+		
+		border-radius: 100px;
+		box-shadow: 0px 1px 1px black;
+		
+	}
+	
+}
+
+footer {
+	
+	background: #333;
+	color: white;
+	
+}
