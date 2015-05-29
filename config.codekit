@@ -124,6 +124,48 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/infection\/index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/infection\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/infection\/js\/gmaps.min.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/infection\/js\/gmaps.min.js",
+		"outputAbbreviatedPath": "\/infection\/js\/min\/gmaps.min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/infection\/js\/main.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/infection\/js\/main.js",
+		"outputAbbreviatedPath": "\/infection\/js\/min\/main-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/infection\/js\/min\/main-min.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/infection\/js\/min\/main-min.js",
+		"outputAbbreviatedPath": "\/infection\/js\/min\/min\/main-min-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/js\/foundation.min.js": {
 		"fileType": 64,
 		"ignore": 0,
@@ -379,13 +421,13 @@
 		},
 	"\/README.md": {
 		"criticStyle": 0,
-		"enableFootnotes": 0,
+		"enableFootnotes": 1,
 		"enableLabels": 1,
 		"enableSmartQuotes": 1,
 		"escapeLineBreaks": 0,
 		"fileType": 4096,
-		"ignore": 1,
-		"ignoreWasSetByUser": 1,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/README.md",
 		"maskEmailAddresses": 1,
 		"outputAbbreviatedPath": "\/README.html",

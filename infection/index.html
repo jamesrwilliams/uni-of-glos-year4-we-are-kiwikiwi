@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        
+         </head>
+    <body>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAbwYPMEFV6cAv0hzFOysuLpF4FQO4y0k8&amp;sensor=true"> </script>
+	<script src="js/gmaps.min.js"></script>
+	<script src="js/main.js"></script>
+	<script>
+		
+	
+	$(document).ready(function(){
+	
+		refreshMap();
+	
+		var refresh = setInterval(function() {
+			
+			refreshMap();
+			console.log("Refreshed");
+			
+		}, 16000);
+				
+	});
+		
+	</script>
+    
+    <div id="map-canvas"></div>
+    <style>
+	    
+	    body {
+		    
+		    margin: 0;
+		    padding: 0;
+		    
+	    }
+	    
+	    #map-canvas {
+		    
+		    position: absolute;
+		    top:0;
+		    bottom: 0;
+		    width: 100%;
+		    
+	    }
+	    
+	    </style>
+    </body>
+</html>
