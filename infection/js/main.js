@@ -116,6 +116,8 @@ function refreshMap(){
             /* 3 */
 			
 			initialise(JSON.parse(data));
+			
+			// console.log(data);
           
         },
 	    error: function(){ 
@@ -130,7 +132,8 @@ function refreshMap(){
 function initialise(_data){
 	
 	var game = _data;
-
+	
+	polygons = [];
 		
 	// GMAPS Docs - https://hpneo.github.io/gmaps/documentation.html
 	
@@ -176,7 +179,6 @@ function initialise(_data){
 	];
 		
 	map.setOptions({styles: styles});
-	
 		
 	drawFences(51.888094, -2.091802, game);
 		
@@ -190,6 +192,8 @@ function initialise(_data){
 			- 6 Free	
 			
 		*/
+		
+	console.log(polygons.length);	
 		
 	for(i=0; i < polygons.length; i++){
 		

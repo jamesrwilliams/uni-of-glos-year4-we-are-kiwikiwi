@@ -20,11 +20,12 @@
 	
 		refreshMap();
 	
-		setInterval(function() {
+		var refresh = setInterval(function() {
 			
 			refreshMap();
+			console.log("Refreshed");
 			
-		}, 120000);
+		}, 16000);
 				
 	});
 		
