@@ -1,66 +1,9 @@
 * {
   -webkit-font-smoothing: antialiased; }
 
-body {
-  font-size: 16px;
-  line-height: 27px; }
-
-h1 {
-  font-size: 79px;
-  line-height: 81px;
-  margin-top: 54px;
-  margin-bottom: 27px; }
-
-h2 {
-  font-size: 46px;
-  line-height: 54px;
-  margin-top: 54px;
-  margin-bottom: 27px; }
-
-h3 {
-  font-size: 27px;
-  line-height: 27px;
-  margin-top: 27px;
-  margin-bottom: 27px; }
-
-h4 {
-  font-size: 16px;
-  line-height: 27px;
-  margin-top: 27px;
-  margin-bottom: 27px; }
-
-p, ul, ol, pre, table, blockquote {
-  margin-top: 27px;
-  margin-bottom: 27px; }
-
-hr {
-  border: 1px solid;
-  margin: -1px 0; }
-
-ul ul, ol ol, ul ol, ol ul {
-  margin-top: 0;
-  margin-bottom: 0; }
-
-b, strong, em, small, code {
-  line-height: 1; }
-
-sup, sub {
-  vertical-align: baseline;
-  position: relative;
-  top: -0.4em; }
-
-sub {
-  top: 0.4em; }
-
 .top-bar .name h1 a {
   color: #a9c322;
   font-weight: bold; }
-
-ul.social {
-  padding: 10px; }
-
-.social {
-  margin-left: -15px; }
 
 .videoWrapper {
   position: relative;
@@ -76,12 +19,6 @@ ul.social {
   width: 100%;
   height: 100%; }
 
-#bgvid {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%; }
-
 header {
   background: #333333; }
 
@@ -92,12 +29,6 @@ section.hero {
   color: white;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding: 15vh 0 0 0; }
-  section.hero .splash p {
-    background: url(../img/hero.jpg) repeat;
-    -webkit-background-clip: text; }
-  section.hero #logo {
-    width: 100%;
-    height: auto; }
   section.hero h2 {
     font-family: "futura-pt",sans-serif;
     text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
@@ -105,16 +36,27 @@ section.hero {
     font-size: 72px;
     line-height: 1em;
     color: white; }
+  section.hero #logo {
+    width: 100%;
+    height: auto; }
+
+.video_element {
+  margin-top: 2vh; }
 
 .highlight {
   color: #a9c322; }
 
+section.game {
+  padding: 50px 0; }
+
 section.app {
+  padding-top: 50px;
   background: #ECECEC; }
 
+section.team h2 {
+  margin: 20px 0; }
 section.team h3 {
-  font-weight: bold; }
-section.team h3 {
+  font-weight: bold;
   margin-bottom: 0; }
 section.team p {
   font-size: 14px; }
@@ -125,5 +67,9 @@ section.team .profile img {
   box-shadow: 0px 1px 1px black; }
 
 footer {
+  margin-top: 50px;
+  line-height: 50px;
   background: #333;
   color: white; }
+  footer p {
+    margin: 20px 0; }
