@@ -1,0 +1,75 @@
+* {
+  -webkit-font-smoothing: antialiased; }
+
+.top-bar .name h1 a {
+  color: #a9c322;
+  font-weight: bold; }
+
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 25px;
+  height: 0;
+  margin-bottom: 20px; }
+
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+header {
+  background: #333333; }
+
+section.hero {
+  background: url(../img/hero.jpg);
+  background-position: center center;
+  background-size: cover;
+  color: white;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 15vh 0 0 0; }
+  section.hero h2 {
+    font-family: "futura-pt",sans-serif;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
+    font-weight: 400;
+    font-size: 72px;
+    line-height: 1em;
+    color: white; }
+  section.hero #logo {
+    width: 100%;
+    height: auto; }
+
+.video_element {
+  margin-top: 2vh; }
+
+.highlight {
+  color: #a9c322; }
+
+section.game {
+  padding: 50px 0; }
+
+section.app {
+  padding-top: 50px;
+  background: #ECECEC; }
+
+section.team h2 {
+  margin: 20px 0; }
+section.team h3 {
+  font-weight: bold;
+  margin-bottom: 0; }
+section.team p {
+  font-size: 14px; }
+section.team .row:not(:last-child) {
+  margin-bottom: 20px; }
+section.team .profile img {
+  border-radius: 100px;
+  box-shadow: 0px 1px 1px black; }
+
+footer {
+  margin-top: 50px;
+  line-height: 50px;
+  background: #333;
+  color: white; }
+  footer p {
+    margin: 20px 0; }
