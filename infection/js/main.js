@@ -1,101 +1,209 @@
-	var map, i, output, test_marker;
+/**
+ *	Infection Web Page 
+ * 
+ *	@version		0.1
+ *	@package		com.the-hybrid.wearekiwikiwi
+ *	@description	Web interface for the Map element of The-Hybrid Companion App			
+ *	@author 		James Williams (@James_RWilliams)
+ *	@copyright 		Copyright (c) 31/05/2015
+ *
+ *
+ *	==================================================
+ *	==================================================
+ *	The source code below is a slimmed down version of 
+ *	the game logic from the companion app.
+ *	==================================================
+ *	==================================================
+ *
+ */	
+	
+var map, i, output, test_marker;
 
-	var polygons = [];
+var polygons = [];
 
-	function drawHex(width, lat, lng){
-	
-		var x = 0.0001;
-		
-		var output = [  
-		
-			[ lat + (x*1), lng + 0				], 		//1
-			[ lat + (x*3), lng + 0				],		//2
-			[ lat + (x*4), lng + ((x*1)*2.7)	],		//3
-			[ lat + (x*3), lng + ((x*2)*2.7) 	],		//4
-			[ lat + (x*1), lng + ((x*2)*2.7) 	],		//5
-			[ lat + (x*0), lng + ((x*1)*2.7)	]		//6	
-		];
-		
-		return output;
-		
-	}
-	
-	function isNumber(n){
-	
-	   return n == parseFloat(n);
-	   
-	}
-	function isEven(n){
-		
-	   return isNumber(n) && (n % 2 === 0);
-	   
-	}
-	
-	function isOdd(n){
-		
-	   return isNumber(n) && (Math.abs(n) % 2 === 1);
-	   
-	}
-	
-	function drawFences(origin_lat, origin_lng, game){
-	
+/**
+ *	drawHex
+ *
+ *	This function draws a hexagon from the given corrdinates and the size
+ *
+ *	@param width 	- Width specification of the hexagon.
+ *	@param lat		- Latitude origin point for hexagon.
+ *	@param lag		- Longitude origin point for the hexagon.
+ * 
+ */	
 
-		var length = 10;
-		var iter = 10;
+function drawHex(width, lat, lng){
+	
+	var x = 0.0001;
+	
+	var output = [  
+	
+		[ lat + (x*1), lng + 0				], 		//1
+		[ lat + (x*3), lng + 0				],		//2
+		[ lat + (x*4), lng + ((x*1)*2.7)	],		//3
+		[ lat + (x*3), lng + ((x*2)*2.7) 	],		//4
+		[ lat + (x*1), lng + ((x*2)*2.7) 	],		//5
+		[ lat + (x*0), lng + ((x*1)*2.7)	]		//6	
+	];
+	
+	return output;
+	
+}
+
+/**
+ *	isNumber()	
+ *
+ *	Utility Method for checking if the given values is a number
+ *	
+ *	@param 	string	- String to check if it is a number
+ *	@return bool 	- If the paramerter string a number
+ *
+ */	
+	
+function isNumber(n){
+
+   return n == parseFloat(n);
+   
+}
+
+/**
+ *	isEven()
+ *
+ *	Utility Method for checking if the given values is a number
+ * 
+ *	@param n		- The variable to check
+ *	@return bool 	- If the paramerter number is even 
+ *	
+ */
+
+function isEven(n){
+	
+   return isNumber(n) && (n % 2 === 0);
+   
+}
+
+/**
+ *	isOdd()
+ *
+ *	Utility Method for checking if the given values is a number
+ *
+ *	@param	n		- The variable to check
+ *	@return bool 	- If the paramerter number is odd 
+ * 
+ */	
+
+function isOdd(n){
+	
+   return isNumber(n) && (Math.abs(n) % 2 === 1);
+   
+}
+
+/**
+ *	drawFences()
+ * 
+ *	DrawFences maps out the polgons for the Geolocation Game: Infection
+ *	
+ *	@param Origin_lat	- The starting Latitude of the game grid
+ *	@param Orgin_lang 	- The starting Longitude of the game grid
+ *	@param game	   		- The game data object
+ *
+ *
+ *	=====================
+ *	= Function Overview =
+ *	=====================
+ *
+ *	1. 	Setup Loop for the number of rows in the grid.
+ *
+ *	2. 	Check if the row number is odd or even. 
+ *		Odd rows need to be intended and one less 
+ *		than the row count to fit into the grid.
+ *
+ *	3.	Then Loop for the legnth of each row.
+ *
+ *	4.	From the count number the offset for the grid
+ *		can be calculated.
+ *
+ *	5.	Then create the map polygon using the 
+ *		drawHex() function with settings from
+ *		the 'game' object parameter 
+ *
+ */
+
+function drawFences(origin_lat, origin_lng, game){
+
+
+	var length = 10;
+	var iter = 10;
+	
+	var offset = 0.000300;
+	var oddTab = 0.000270;
+	
+	/*	
+	 *	Generate the Grid System 
+	 */
+	 
+	/* 1 */
+	 
+	for(count = 0; count < game.setup.height; count++){
 		
-		var offset = 0.000300;
-		var oddTab = 0.000270;
+		/* 2 */
 		
-		/*	
-		 *	Generate the Grid System 
-		 */
-		 
-		for(count = 0; count < game.setup.height; count++){
+		if(isEven(count)){
 			
-			if(isEven(count)){
+			/* 3 */
+			
+			for(i = 0; i < game.setup.width; i++){
 				
-				for(i = 0; i < game.setup.width; i++){
-	
-					var lat_offset = (i * 0);
-					var lng_offset = (i * -0.00054);
-			
-					polygons.push(map.drawPolygon({ 
-						
-						paths: drawHex(1, origin_lat - (offset*count), 
-						(origin_lng - lng_offset)), 
-						strokeColor: game.grid.strokeColour, 
-						strokeOpacity: game.grid.strokeWeight, 
-						strokeWeight: 0.4, 
-						fillColor: game.style.fillColor, 
-						fillOpacity: game.style.fillOpactiy
+				/* 4 */
+				
+				lat_offset = (i * 0);
+				lng_offset = (i * -0.00054);
+		
+				/* 5 */
+		
+				polygons.push(map.drawPolygon({ 
 					
-					}));			
+					paths: drawHex(1, origin_lat - (offset*count), 
+					(origin_lng - lng_offset)), 
+					strokeColor: game.grid.strokeColour, 
+					strokeOpacity: game.grid.strokeWeight, 
+					strokeWeight: 0.4, 
+					fillColor: game.style.fillColor, 
+					fillOpacity: game.style.fillOpactiy
 				
-				}
-				
+				}));			
+			
 			}
 			
-			else if(isOdd(count)){
-				
-				for(i = 0; i < game.setup.width-1; i++){
-	
-					var lat_offset = (i * 0);
-					var lng_offset = (i * -0.00054);
+		}
+		
+		/* 2 */
+		
+		else if(isOdd(count)){
 			
-					polygons.push(map.drawPolygon({ 
-						
-						paths: drawHex(1, origin_lat - (offset*count), 
-						((origin_lng+oddTab) - lng_offset)), 
-						strokeColor: game.grid.strokeColour, 
-						strokeOpacity: game.grid.strokeWeight, 
-						strokeWeight: game.grid.strokeOpacity, 
-						fillColor: game.style.fillColor, 
-						fillOpacity: game.style.fillOpactiy					
-						
-					}));	
-						
+			/* 3 */
+			
+			for(i = 0; i < game.setup.width-1; i++){
+
+				/* 4 */
+
+				lat_offset = (i * 0);
+				lng_offset = (i * -0.00054);
 				
-				}
+				/* 5 */
+		
+				polygons.push(map.drawPolygon({ 
+					
+					paths: drawHex(1, origin_lat - (offset*count), 
+					((origin_lng+oddTab) - lng_offset)), 
+					strokeColor: game.grid.strokeColour, 
+					strokeOpacity: game.grid.strokeWeight, 
+					strokeWeight: game.grid.strokeOpacity, 
+					fillColor: game.style.fillColor, 
+					fillOpacity: game.style.fillOpactiy					
+					
+				}));	
+					
 			
 			}
 		
@@ -103,17 +211,27 @@
 	
 	}
 
+}
+
+/**
+ *	refreshMap
+ *
+ *	Clears the map object and fetches the map again to show the latest
+ *	version on the display.
+ * 
+ */		
+
 function refreshMap(){
-			
+		
 	$.ajax({
 	    
 	    /* 2 */   
-        type: "get",
-        url: "http://www.jamesrwilliams.co.uk/hybrid/api.php?request=fetch_game",
-        dataType: "json",
-        success: function(data) {
-            
-           if(data.charAt(0) === '"' && data.charAt(data.length-1)){
+	    type: "get",
+	    url: "http://www.jamesrwilliams.co.uk/hybrid/api.php?request=fetch_game",
+	    dataType: "json",
+	    success: function(data) {
+	        
+	       if(data.charAt(0) === '"' && data.charAt(data.length-1)){
 				
 				/* TODO - Remove Bug in PHP that adds quotes
 				 * when claiming outside the game grid */
@@ -126,29 +244,51 @@ function refreshMap(){
 				initialise(JSON.parse(data));
 				
 			}
-			
-			//console.log(data);
-			// initialise(JSON.parse(data));
-			
-			
-          
-        },
+			      
+	    },
 	    error: function(){ 
 		
 			console.log("Error");
 		    
 		}    
 	});
-	
+
 }
-		
-function initialise(_data){
+
+/**
+ *	initialise()
+ *
+ *	"On to scene 24, which is a smashing scene with some lovley acting"
+ *
+ *	=====================
+ *	= Function Overview =
+ *	=====================
+ *
+ *	1.	Clears the game and poloyons objects
+ *
+ *	2.	Setup the Google Map API to the page using the
+ *		GMaps libary: https://hpneo.github.io/gmaps/documentation.html
+ *
+ *	3.	Set up the google map styles with an array from
+ *		https://snazzymaps.com/style/15/subtle-grayscale 
+ * 
+ *	4.	Begin drawing the game grid with the drawFences()
+ *		method.
+ *
+ *	5.	Then cycle through the grid styling it according
+ *		to its occupation variable in the game object.
+ *
+ */
+	
+function initialise(_data){ // jshint ignore:line
+
+	/* 1 */
 	
 	var game = _data;
 	
 	polygons = [];
 		
-	// GMAPS Docs - https://hpneo.github.io/gmaps/documentation.html
+	/* 2 */
 	
 	map = new GMaps({
 		zoom: 18,
@@ -157,63 +297,31 @@ function initialise(_data){
 		lng: -2.088669,
 		disableDefaultUI: true
 	});	
-		
-		
+	
+	/* 3 */
+	
 	var styles = [
+		
+		{"featureType":"landscape","stylers":[{"saturation":-100},{"lightness":65},{"visibility":"on"}]},
+		{"featureType":"poi","stylers":[{"saturation":-100},{"lightness":51},{"visibility":"simplified"}]},
+		{"featureType":"road.highway","stylers":[{"saturation":-100},{"visibility":"simplified"}]},
+		{"featureType":"road.arterial","stylers":[{"saturation":-100},{"lightness":30},{"visibility":"on"}]},
+		{"featureType":"road.local","stylers":[{"saturation":-100},{"lightness":40},{"visibility":"on"}]},
+		{"featureType":"transit","stylers":[{"saturation":-100},{"visibility":"simplified"}]},
+		{"featureType":"administrative.province","stylers":[{"visibility":"off"}]},
+		{"featureType":"water","elementType":"labels","stylers":[{"visibility":"on"},{"lightness":-25},{"saturation":-100}]},
+		{"featureType":"water","elementType":"geometry","stylers":[{"hue":"#ffff00"},{"lightness":-25},{"saturation":-97}]}
 	
-		{"featureType":"all","elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#000000"},{"lightness":40}]},
-		{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#000000"},{"lightness":16}]},
-		{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},
-		{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":20}]},
-		{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":17},{"weight":1.2}]},
-		{"featureType":"administrative.locality","elementType":"labels.text.fill","stylers":[{"hue":"#ff0000"},{"lightness":"100"}]},
-		{"featureType":"administrative.neighborhood","elementType":"labels.text.fill","stylers":[{"color":"#ffffff"}]},
-		{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":20}]},
-		{"featureType":"landscape.man_made","elementType":"geometry.fill","stylers":[{"lightness":"7"}]},
-		{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":21}]},
-		{"featureType":"poi.park","elementType":"geometry.fill","stylers":[{"color":"#48d1af"}]},
-		{"featureType":"poi.park","elementType":"labels.text.fill","stylers":[{"color":"#66b0ff"}]},
-		{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":17}]},
-		{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":29},{"weight":0.2}]},
-		{"featureType":"road.highway","elementType":"labels.text","stylers":[{"visibility":"off"}]},
-		{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":18}]},
-		{"featureType":"road.arterial","elementType":"labels.text","stylers":[{"visibility":"off"}]},
-		{"featureType":"road.arterial","elementType":"labels.text.fill","stylers":[{"lightness":"100"},{"visibility":"off"}]},
-		{"featureType":"road.arterial","elementType":"labels.text.stroke","stylers":[{"visibility":"off"}]},
-		{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":16}]},
-		{"featureType":"road.local","elementType":"geometry.fill","stylers":[{"visibility":"off"}]},
-		{"featureType":"road.local","elementType":"labels.text","stylers":[{"visibility":"on"}]},
-		{"featureType":"road.local","elementType":"labels.text.fill","stylers":[{"lightness":"100"},{"visibility":"on"}]},
-		{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":19}]},
-		{"featureType":"transit.station.bus","elementType":"labels.text.fill","stylers":[{"hue":"#ff0000"}]},
-		{"featureType":"water","elementType":"geometry","stylers":[{"color":"#4aceae"},{"lightness":17}]},
-		{"featureType":"water","elementType":"geometry.fill","stylers":[{"lightness":"100"}]}
-		
-	];
-	
-	var alt_styles = [
-		
-		{"featureType":"landscape","stylers":[{"saturation":-100},{"lightness":65},{"visibility":"on"}]},{"featureType":"poi","stylers":[{"saturation":-100},{"lightness":51},{"visibility":"simplified"}]},{"featureType":"road.highway","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"road.arterial","stylers":[{"saturation":-100},{"lightness":30},{"visibility":"on"}]},{"featureType":"road.local","stylers":[{"saturation":-100},{"lightness":40},{"visibility":"on"}]},{"featureType":"transit","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"administrative.province","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels","stylers":[{"visibility":"on"},{"lightness":-25},{"saturation":-100}]},{"featureType":"water","elementType":"geometry","stylers":[{"hue":"#ffff00"},{"lightness":-25},{"saturation":-97}]}
-		
 	];
 		
-	map.setOptions({styles: alt_styles});
+	map.setOptions({styles: styles});
+	
+	/* 4 */
 		
 	drawFences(51.888094, -2.091802, game);
 		
-		/*
-		
-			- 1 Vampire
-			- 2 Werewolf
-			- 3 Ghost
-			- 4 Zombie
-			- 5 OTS
-			- 6 Free	
-			
-		*/
-		
-	console.log(polygons.length);	
-		
+	/* 5 */
+
 	for(i=0; i < polygons.length; i++){
 		
 		// console.log("Grid: " + i + " - " + game.grid[i]);
@@ -228,7 +336,7 @@ function initialise(_data){
 			
 			// Werewolf
 			polygons[i].setOptions({fillColor: game.style.werewolf, fillOpacity: 0.2, strokeWeight: 0.1});
-
+	
 			
 		}else if(game.grid[i] == "3"){
 			
@@ -248,5 +356,5 @@ function initialise(_data){
 		}
 		
 	}
-	
+
 }
